@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class= "icons">
+        <div class= "full">
+        <div class= "application" id="one">
+            <h2>Txt</h2>
+        </div>
+        <p>TextWriter</p>
+    </div>
+            <br>
+            <div class= "full">
+        <div class= "application" id="two">
+            <h2>Doc</h2>
+        </div>
+        <p>Documents</p>
+    </div>
+    <br>
+    <div class= "full">
+        <div class= "application" id="three">
+            <h2>Set</h2>
+        </div>
+        <p>Settings</p>
+    </div>
+            <br>
+            <div class= "full">
+        <div class= "application" id="four">
+            <h2>Web</h2>
+        </div>
+        <p>Web Browser</p>
+    </div>
+        </div>
+    <div class= "window">
+        <div class= "txt">
+            <div class= "bar">
+            <div class= "close" id="co">
+                
+                </div>
+                <div class= "save">
+                
+                </div>
+            </div>
+            <div class= "body">
+            <textarea cols="140" rows="35" id="tx"></textarea>
+            </div>
+            <div class= "savewindow">
+            <h2>Save</h2>
+            <br>
+            File Name: <input type="text" placeholder="Enter the File Name Here" id="te" name="text" size="30">
+            <br><br>
+            Save As: <select name="select" id="sl">
+                <option id="o1">Raw Text File (.txt)</option>
+                <option id="o2">HTML Display File (.hdf)</option>
+                </select>
+                <br><br>
+                Save To: <select name="selec" id="se">
+                <option id="d1">Documents Folder</option>
+                <option id="d2">Desktop</option>
+                </select>
+                <button type="button" id="bu" name="button">Save</button>
+            </div>
+        </div>
+        <div class= "files">
+        <div class= "bar">
+            <div class= "close" id="ct">
+                
+                </div>
+            </div>
+            <h2>Files</h2>
+            <br><br>
+            <table id="tb">
+            </table>
+        </div>
+        <div class= "file">
+            <div class= "bar">
+            <div class= "close" id="cf">
+                
+                </div>
+            </div>
+            <br>
+            <h2>Settings</h2>
+            <button type="button" id="bg" name="submit">Apply Changes</button>
+            <br>
+            <p>Background Image: <input type="text" name="image" id="im" placeholder="Enter an Image URL" size="40"></p>
+        </div>
+        <div class= "browser">
+        <div class= "bar">
+            <div class= "close" id="cs">
+                
+                </div>
+            &nbsp;&nbsp;
+            <div class= "back" id="bc">
+            
+            </div>
+            </div>
+           <iframe src="https://www.bing.com/"></iframe> 
+        </div>
+        </div>
+        <div class= "navigation">
+            <h2>{ DevOS }</h2>
+        </div>
+    </body>
+    <style>
+    .application {
+        height:80px;
+        width:80px;
+        margin-left:20px;
+        background-color:lightgray;
+        border:solid;
+        border-width:1.5px;
+    }
+    .application h2 {
+        font-family:Calibri;
+        text-align:center;
+        vertical-align:middle;
+        line-height:40px;
+    }
+        .full p {
+            font-family:Calibri;
+            text-align:center;
+            margin-top:5px;
+        }
+        .full {
+            width:120px;
+        }
+        .application:active {
+            background-color:darkgray;
+        }
+        .txt {
+            height:600px;
+            width:1000px;
+            display:none;
+            float:right;
+            margin-top:-250px
+            position:absolute;
+        }
+        .bar {
+            width:1002px;
+            height:30px;
+            background-color:gray;
+            position:absolute;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+        }
+        .close {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            background-color:red;
+            margin-top:7.5px;
+            margin-left:7.5px;
+            position:relative;
+        }
+        .back {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            background-color:black;
+            margin-top:-30px;
+            margin-left:30px;
+            position:relative;
+        }
+        .body textarea {
+            margin-top:30px;
+            border:solid;
+            border-width:1px;
+            border-top:none;
+            outline:none;
+            resize:none;
+            background-color:lightgray;
+            font-size:14px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+        }
+        .files {
+            width:1002px;
+            height:600px;
+            background-color:lightblue;
+            position:absolute;
+            display:none;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+        }
+        .files table {
+            margin-top:100px;
+            position:relative;
+        }
+        .files table, tr, td, th {
+            border:solid 1px;
+            border-collapse:collapse;
+            font-family:Calibri;
+        }
+        .files td {
+            width:396px;
+            font-family:Calibri;
+            padding-left:20px;
+        }
+        .files h2 {
+            font-family:Calibri;
+            margin-top:40px;
+            padding-left:10px;
+        }
+        .files table {
+            margin-top:-15px;
+        }
+        .save {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            margin-right:7.5px;
+            background-color:black;
+            float:right;
+            margin-top:-10px;
+        }
+        .savewindow {
+            background-color:darkgray;
+            width:300px;
+            height:400px;
+            margin-left:350px;
+            margin-top:-500px;
+            position:relative;
+            border:solid 2px;
+            font-family:Calibri;
+            padding-left:10px;
+        }
+        .savewindow h2 {
+            margin-left:15px;
+        }
+        .savewindow button {
+            font-size:14px;
+            border:solid;
+            border-width:2px;
+            float:right;
+            margin-right:10px;
+            margin-top:200px;
+            outline:none;
+        }
+        .savewindow button:active {
+            border-width:1px;
+        }
+        #rf {
+            z-index:2;
+        }
+        .file {
+            width:1002px;
+            height:600px;
+            background-color:lightgray;
+            position:absolute;
+            z-index:0;
+            display:none;
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+        }
+        .file p {
+            margin-left:10px;
+        }
+        .file h2 {
+            padding-left:10px;
+        }
+        .file button {
+        float:right;
+        margin-top:-40px;
+        margin-right:10px;
+        }
+        body {
+            background-size:cover;
+            position:fixed;
+        }
+        .navigation {
+            height:50px;
+            width:1440px;
+            margin-top:222px;
+            margin-left:-8px;
+            background-color:gray;
+            position:fixed;
+        }
+        .navigation h2 {
+            font-family:Calibri;
+            vertical-align:middle;
+            line-height:10px;
+            margin-left:10px;
+            color:#2D2D2D;
+            width:100px;
+        }
+        .navigation h2:hover {
+            color:black;
+        }
+        .browser {
+           width:1002px;
+            height:600px;
+            background-color:lightgray; 
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            z-index:0;
+            position:absolute;
+            display:none;
+        }
+        .browser iframe {
+            margin-top:30px;
+            width:998px;
+            height:566px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var txtarr = []  
+            var txtarr2 = []
+            $(".application").hover(function(){
+                $(".full").draggable();
+            });
+            $("#one").dblclick(function(){
+                $(".txt").css("display", "block")
+                $(".savewindow").css("display", "none")
+            });
+            $("#two").dblclick(function(){
+                $(".files").css("display", "block")
+            });
+            $("#co").click(function(){
+                $(".txt").css("display", "none")
+            });
+            $("#ct").click(function(){
+                $(".files").css("display", "none")
+            });
+            $("#cf").click(function(){
+                $(".file").css("display", "none")
+            });
+            $("#cs").click(function(){
+                $(".browser").css("display", "none")
+            });
+            $("#four").dblclick(function(){
+               $(".browser").css("display", "block") 
+            })
+            $("#bc").click(function(){
+                history.back();
+            })
+            $(".bar").hover(function(){
+               $(".txt").draggable(); 
+                $(".files").draggable();
+                $(".file").draggable();
+                $(".browser").draggable();
+            });
+            $(".save").click(function(){
+                $(".savewindow").css("display", "block")
+                
+            });
+            var n = 1
+            var b = 1
+            var c = 1
+            $("#bu").click(function(){
+                var value = $("#tx").val();
+                var value2 = $("#sl").val();
+                var value3 = $("#se").val();
+                var value4 = $("#te").val();
+                var value1 = value.split("\n")
+                var final_thing = value1.join("%")
+                var d = new Date()
+                var value5 = "Last Saved At: " + d.toDateString() + " " + d.toTimeString().substring(0, 8)
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } 
+                else {
+                sessionStorage.clickcount = 1;
+                }  
+                document.cookie = "#"+sessionStorage.clickcount+"="+"^"+final_thing+"^"+value2+"^"+value3+"^"+value4+"^"+value5;
+                    var a = document.getElementById("tb").insertRow();
+                    var row1 = a.insertCell(0)
+                    var row2 = a.insertCell(1)
+                    var row3 = a.insertCell(2)
+                    row1.innerHTML = value4;
+                    var d = new Date()
+                    row2.innerHTML = value5
+                    row3.innerHTML = value2;
+                    txtarr.push(value4)
+                    txtarr2.push(value)
+                    $(".savewindow").css("display", "none")
+                    $("#tx").val("")
+                    $("#sl").val("Raw Text File (.txt)")
+                    $("#se").val("Documents Folder")
+                    $("#te").val("")
+                    $(".txt").css("display", "none");
+                
+            });
+            $("#three").dblclick(function(){
+               $(".file").css("display", "block") 
+            })
+            $(".window div").click(function() {
+                $("div").css("z-index", "0")
+         $(this).css("z-index", "1")   
+            })
+            for (var f = 0; f < document.getElementById("tb").rows.length; f++) {
+                    document.getElementById("tb").deleteRow(f);
+                }
+                var txtarr2 = []
+                var iarray = []
+                var get = document.cookie.split(";")
+                for (var i = 0; i < get.length; i++) {
+                    if (get[i].charAt(1) === "#") {
+                        iarray.push(i)
+                    }
+                    if (get[i].charAt(1) === "i" && get[i].charAt(2) === "m") {
+                        $("body").css("background-image", "url('"+get[i].substring(4, get[i.length - 1])+"')")
+                    }
+                }
+                for (var v = 0; v < iarray.length; v++) {
+                        var array_split = get[iarray[v]].split("^")
+                        txtarr2.push(array_split[1])
+                        var ol = document.getElementById("tb").insertRow();
+                        var row1 = ol.insertCell(0)
+                        var row2 = ol.insertCell(1)
+                        var row3 = ol.insertCell(2)
+                        row1.innerHTML = array_split[4]
+                        row2.innerHTML = array_split[5]
+                        row3.innerHTML = array_split[2]
+                    }
+            $(document).delegate("tr", "dblclick", function(){
+                $(".txt").css("display", "block")
+                $(".savewindow").css("display", "none")
+                var rowa = this.rowIndex
+                $("#tx").val(txtarr2[rowa].replace(/%/g, "\n"))
+                $(".files").css("display", "none")
+                
+            })
+            $("#bg").click(function(){
+                var background = $("#im").val();
+                document.cookie = "im="+background
+                var other = "url('"+background+"')"
+                $("body").css("background-image", other, "no-repeat", "fixed")
+            })
+        });
+    </script>
+</html>
