@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class= "full-screen" id="fs">
+        <div class= "icons">
+        <div class= "full">
+        <div class= "application" id="one">
+            <h2>Txt</h2>
+        </div>
+        <p>TextWriter</p>
+    </div>
+            <br>
+            <div class= "full">
+        <div class= "application" id="two">
+            <h2>Doc</h2>
+        </div>
+        <p>Documents</p>
+    </div>
+    <br>
+    <div class= "full">
+        <div class= "application" id="three">
+            <h2>Set</h2>
+        </div>
+        <p>Settings</p>
+    </div>
+            <br>
+            <div class= "full">
+        <div class= "application" id="four">
+            <h2>Web</h2>
+        </div>
+        <p>Web Browser</p>
+    </div>
+        </div>
+        <div class= "menu">
+        <h2>Application Menu</h2>
+            <hr>
+            <br>
+            <table>
+                <tr id="r1">
+                    <td>
+                        <p>Calculator</p>
+                    </td>
+                </tr>
+                <tr id="r2">
+                    <td>
+                        <p>Calendar</p>
+                    </td>
+                </tr>
+                <tr id="r3">
+                    <td>
+                        <p>TextWriter</p>
+                    </td>
+                </tr>
+                <tr id="r4">
+                    <td>
+                        <p>Web Browser</p>
+                    </td>
+                </tr>
+                <tr id="r5">
+                    <td>
+                        <p>Documents</p>
+                    </td>
+                </tr>
+                <tr id="r6">
+                    <td>
+                        <p>Settings</p>
+                    </td>
+                </tr>
+                <tr id="r7">
+                    <td>
+                        <p>Reminders</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <div class= "window">
+        <div class= "txt">
+            <div class= "bar">
+            <div class= "close" id="co">
+                
+                </div>
+                <div class= "save">
+                
+                </div>
+                <div class= "now_save">
+
+                </div>
+            </div>
+            <div class= "body">
+            <textarea cols="140" rows="35" id="tx"></textarea>
+            </div>
+            <div class= "savewindow">
+            <h2>Save</h2>
+            <br>
+            File Name: <input type="text" placeholder="Enter the File Name Here" id="te" name="text" size="30">
+            <br><br>
+            Save As: <select name="select" id="sl">
+                <option id="o1">Raw Text File (.txt)</option>
+                <option id="o2">HTML Display File (.hdf)</option>
+                </select>
+                <br><br>
+                Save To: <select name="selec" id="se">
+                <option id="d1">Documents Folder</option>
+                <option id="d2">Desktop</option>
+                </select>
+                <button type="button" id="bu" name="button">Save</button>
+            </div>
+        </div>
+        <div class= "files">
+        <div class= "bar">
+            <div class= "close" id="ct">
+                
+                </div>
+            </div>
+            <h2>Files</h2>
+            <br><br>
+            <table id="tb">
+            </table>
+        </div>
+        <div class= "file">
+            <div class= "bar">
+            <div class= "close" id="cf">
+                
+                </div>
+            </div>
+            <br>
+            <h2>Settings</h2>
+            <button type="button" id="bg" name="submit">Apply Changes</button>
+            <br>
+            <p>Background Image: <input type="text" name="image" id="im" placeholder="Enter an Image URL" size="40"></p>
+            <p>Colour Scheme: &nbsp; Light Theme: <input type="radio" name="select" value="light" id="c1"> &nbsp; Dark Theme: <input type="radio" name="select" value="dark" id="c2"></p>
+        </div>
+        <div class= "browser">
+        <div class= "bar">
+            <div class= "close" id="cs">
+                
+                </div>
+            &nbsp;&nbsp;
+            <div class= "back" id="bc">
+            
+            </div>
+            </div>
+           <iframe src="https://www.bing.com/"></iframe> 
+        </div>
+        <div class= "calculator">
+        <div class= "bar">
+            <div class= "close" id="ce">
+            </div>
+        </div>
+        <div class= "display">
+        <input type="text" id="ds" name="display" readonly size="105">
+    </div>
+    <div class= "numbers">
+        <table>
+            <h3>Arithmetic</h3>
+            <tr>
+                <td>
+                    <h2>1</h2>
+                </td>
+                <td>
+                    <h2>2</h2>
+                </td>
+                <td>
+                    <h2>3</h2>
+                </td>
+                <td>
+                    <h2>+</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>4</h2>
+                </td>
+                <td>
+                    <h2>5</h2>
+                </td>
+                <td>
+                    <h2>6</h2>
+                </td>
+                <td>
+                    <h2>-</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>7</h2>
+                </td>
+                <td>
+                    <h2>8</h2>
+                </td>
+                <td>
+                    <h2>9</h2>
+                </td>
+                <td>
+                    <h2>*</h2>
+                </td>
+                <tr>
+                <td id="b1">
+                    <h2>0</h2>
+                </td>
+                <td id="b2">
+                    <h2></h2>
+                </td>
+                <td>
+                    <h2>.</h2>
+                </td>
+                <td>
+                    <h2>&#247;</h2>
+                </td>
+            </tr>
+            </tr>
+        </table>
+        <table>
+            <h3>Special Function</h3>
+            <tr id="ee">
+                <td id="e1">
+                    <h3>sin (x)</h3>
+                </td>
+                <td id="e2">
+                    <h3>cos (x)</h3>
+                </td>
+                <td id="e3">
+                    <h3>tan (x)</h3>
+                </td>
+                <td id="e4">
+                    <h3>csc (x)</h3>
+                </td>
+                <td id="e5">
+                    <h3>sec (x)</h3>
+                </td>
+                <td id="e6">
+                    <h3>cot (x)</h3>
+                </td>
+                <td id="e7">
+                    <h3>e<sup>x</sup></h3>
+                </td>
+                <td id="e8">
+                    <h3>&#960;</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div class= "hidden">
+        <div class= "bar" id="sm">
+            <div class= "close" id="cn">
+            </div>
+        </div>
+        <input type="text" name="hidden" id="tf" placeholder="Type in Your Code" size="30">
+        <br>
+        <button type= "button" name="hidden-submit" id="bv">Submit</button>
+    </div>
+    <div class= "reminders">
+        <div class= "bar">
+            <div class= "close" id="cr">
+            </div>
+        </div>
+        <h2>Reminders and Lists</h2>
+        <br>
+        <input type="text" id="rm" name="remind" size="100">
+    </div>
+        </div>
+        <div class= "navigation">
+            <h2>{ DevOS }</h2>
+        </div>
+    </div>
+    </body>
+    <style>
+    .application {
+        height:80px;
+        width:80px;
+        margin-left:20px;
+        background-color:lightgray;
+        border:solid;
+        border-width:1.5px;
+    }
+    .application h2 {
+        font-family:Calibri;
+        text-align:center;
+        vertical-align:middle;
+        line-height:40px;
+    }
+        .full p {
+            font-family:Calibri;
+            text-align:center;
+            margin-top:5px;
+        }
+        .full {
+            width:120px;
+        }
+        .application:active {
+            background-color:darkgray;
+        }
+        .txt {
+            height:600px;
+            width:1000px;
+            display:none;
+            float:right;
+            margin-top:-550px;
+            position:absolute;
+            margin-left:400px;
+        }
+        .bar {
+            width:1002px;
+            height:30px;
+            background-color:gray;
+            position:absolute;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+        }
+        .close {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            background-color:red;
+            margin-top:7.5px;
+            margin-left:7.5px;
+            position:relative;
+        }
+        .back {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            background-color:black;
+            margin-top:-30px;
+            margin-left:30px;
+            position:relative;
+        }
+        .body textarea {
+            margin-top:30px;
+            border:solid;
+            border-width:1px;
+            border-top:none;
+            outline:none;
+            resize:none;
+            background-color:lightgray;
+            font-size:14px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+        }
+        .files {
+            width:1002px;
+            height:600px;
+            background-color:lightblue;
+            position:absolute;
+            display:none;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            margin-top:-500px;
+            margin-left:350px;
+        }
+        .files table {
+            margin-top:100px;
+            position:relative;
+        }
+        .files table, tr, td, th {
+            border:solid 1px;
+            border-collapse:collapse;
+            font-family:Calibri;
+        }
+        .files td {
+            width:396px;
+            font-family:Calibri;
+            padding-left:20px;
+        }
+        .files h2 {
+            font-family:Calibri;
+            margin-top:40px;
+            padding-left:10px;
+        }
+        .files table {
+            margin-top:-15px;
+        }
+        .save {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            margin-right:7.5px;
+            background-color:black;
+            float:right;
+            margin-top:-10px;
+        }
+        .savewindow {
+            background-color:darkgray;
+            width:300px;
+            height:400px;
+            margin-left:350px;
+            margin-top:-500px;
+            position:relative;
+            border:solid 2px;
+            font-family:Calibri;
+            padding-left:10px;
+        }
+        .savewindow h2 {
+            margin-left:15px;
+        }
+        .savewindow button {
+            font-size:14px;
+            border:solid;
+            border-width:2px;
+            float:right;
+            margin-right:10px;
+            margin-top:200px;
+            outline:none;
+        }
+        .savewindow button:active {
+            border-width:1px;
+        }
+        #rf {
+            z-index:2;
+        }
+        .file {
+            width:1002px;
+            height:600px;
+            background-color:lightgray;
+            position:absolute;
+            z-index:0;
+            display:none;
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            margin-top:-450px;
+            margin-left:300px;
+        }
+        .file p {
+            margin-left:10px;
+        }
+        .file h2 {
+            padding-left:10px;
+        }
+        .file button {
+        float:right;
+        margin-top:-40px;
+        margin-right:10px;
+        }
+        body {
+            background-size:cover;
+            position:fixed;
+        }
+        .navigation {
+            height:50px;
+            width:1440px;
+            margin-top:222px;
+            margin-left:-8px;
+            background-color:gray;
+            position:fixed;
+        }
+        .navigation h2 {
+            font-family:Calibri;
+            vertical-align:middle;
+            line-height:10px;
+            margin-left:10px;
+            color:#2D2D2D;
+            width:100px;
+            position:absolute;
+            margin-top:15px;
+            cursor:pointer;
+        }
+        .navigation h2:hover {
+            color:black;
+        }
+        .browser {
+           width:1002px;
+            height:600px;
+            background-color:lightgray; 
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            z-index:0;
+            position:absolute;
+            display:none;
+            margin-top:-400px;
+            margin-left:250px;
+        }
+        .browser iframe {
+            margin-top:30px;
+            width:998px;
+            height:566px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+        }
+        .menu {
+            height:500px;
+            width:350px;
+            background-color:lightgray;
+            position:absolute;
+            margin-top:-278px;
+            margin-left:-8px;
+            z-index:1;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+            font-family:Calibri;
+            padding-left:10px;
+            padding-right:10px;
+            display:none;
+        }
+        .menu hr {
+            margin-top:-7px;
+            border-top:solid 0.5px black;
+            border-bottom:solid 0.5px black;
+        }
+        .menu table {
+            border:solid 1px;
+            border-collapse:collapse;
+            font-family:Calibri;
+        }
+        .menu table p {
+            padding-left:10px;
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        .menu td {
+            width:400px;
+        }
+        .calculator {
+            width:1002px;
+            height:600px;
+            background-color:lightgray; 
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            z-index:0;
+            position:absolute;
+            margin-top:-500px;
+            margin-left:300px;
+            display:none;
+        }
+        .display input {
+            font-size:20px;
+            margin-top:60px;
+            margin-left:20px;
+            padding-top:10px;
+            padding-bottom:10px;
+            text-align:right;
+            padding-right:10px;
+        }
+        .numbers td h2 {
+            text-align:center;
+            vertical-align:middle;
+            margin-bottom:4px;
+            margin-top:4px;
+        }
+        .numbers table {
+            border: solid 1px;
+            border-collapse:collapse;
+            margin-top:10px;
+            margin-left:20px;
+            margin-top:-10px;
+        }
+        .numbers td {
+            padding-left:40px;
+            padding-right:40px;
+        }
+        #b1 {
+            border-right:none;
+        }
+        #b2 {
+            border-left:none;
+        }
+        #sm {
+            width:300px;
+        }
+        .hidden {
+            width:300px;
+            height:200px;
+            background-color:lightgray; 
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            z-index:0;
+            position:absolute;
+            display:none;
+        }
+        .hidden input {
+            margin-top:50px;
+            margin-left:30px;
+            font-size:14px;
+        }
+        .hidden button {
+            margin-top:90px;
+            margin-left:230px;
+        }
+        .reminders {
+            width:1002px;
+            height:600px;
+            background-color:lightgray; 
+            font-family:Calibri;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            z-index:0;
+            position:absolute;
+            display:none;
+            font-size:14px;
+        }
+        .reminders h2 {
+            padding-top:20px;
+            padding-left:10px;
+        }
+        .snow {
+            height:10px;
+            width:10px;
+            border-radius:10px;
+            background-color:white;
+            position:absolute;
+            margin-top:-1000px;
+        }
+        .icons {
+            margin-top:10px;
+        }
+        .now_save {
+            width:12px;
+            height:12px;
+            border-radius:12px;
+            background-color:green;
+            margin-left:960px;
+            margin-top:-10px;
+        }
+        .calculator h3 {
+            padding-left:20px;
+            margin-top:20px;
+        }
+        #ee tr {
+            margin-top:-200px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var txtarr = []  
+            var txtarr2 = []
+            $(".application").hover(function(){
+                $(".full").draggable();
+            });
+            $("#one").dblclick(function(){
+                $(".txt").css("display", "block")
+                $(".savewindow").css("display", "none")
+            });
+            $("#r1").dblclick(function(){
+                $(".calculator").css("display", "block")
+            });
+            $("#r7").dblclick(function(){
+                $(".reminders").css("display", "block")
+            });
+            $("#two").dblclick(function(){
+                $(".files").css("display", "block")
+            });
+            $("#co").click(function(){
+                $(".txt").fadeOut(100)
+            });
+            $("#ct").click(function(){
+                $(".files").fadeOut(100)
+            });
+            $("#cf").click(function(){
+                $(".file").fadeOut(100)
+            });
+            $("#cs").click(function(){
+                $(".browser").fadeOut(100)
+            });
+            $("#ce").click(function(){
+                $(".calculator").fadeOut(100)
+            });
+            $("#cr").click(function(){
+                $(".reminders").fadeOut(100)
+            });
+            $("#cn").click(function(){
+                $(".hidden").fadeOut(100)
+            });
+            $("#four").dblclick(function(){
+               $(".browser").css("display", "block") 
+            })
+            $(".navigation h2").click(function(){
+               $(".menu").slideToggle();
+            })
+            $(".navigation h2").dblclick(function(){
+               $(".hidden").css("display", "block")
+            })
+            $("#bc").click(function(){
+                history.back();
+            })
+            $(".bar").hover(function(){
+               $(".txt").draggable(); 
+                $(".files").draggable();
+                $(".file").draggable();
+                $(".browser").draggable();
+                $(".calculator").draggable();
+                $(".hidden").draggable();
+                $(".reminders").draggable();
+            });
+            $(".save").click(function(){
+                $(".savewindow").css("display", "block")
+                
+            });
+            var n = 1
+            var b = 1
+            var c = 1
+            $("#bu").click(function(){
+                var value = $("#tx").val();
+                var value2 = $("#sl").val();
+                var value3 = $("#se").val();
+                var value4 = $("#te").val();
+                var value1 = value.split("\n")
+                var final_thing = value1.join("%")
+                var d = new Date()
+                var value5 = "Last Saved At: " + d.toDateString() + " " + d.toTimeString().substring(0, 8)
+                if (localStorage.getItem("num")) {
+                    localStorage.setItem("num", localStorage.getItem("num")+"1")
+                } 
+                else {
+                localStorage.setItem("num", "1")
+                }  
+                confirm(localStorage.getItem("num").length)
+                document.cookie = "<"+localStorage.getItem("num").length+"="+"^"+final_thing+"^"+value2+"^"+value3+"^"+value4+"^"+value5;
+                    var a = document.getElementById("tb").insertRow();
+                    var row1 = a.insertCell(0)
+                    var row2 = a.insertCell(1)
+                    var row3 = a.insertCell(2)
+                    row1.innerHTML = value4;
+                    var d = new Date()
+                    row2.innerHTML = value5
+                    row3.innerHTML = value2;
+                    txtarr.push(value4)
+                    txtarr2.push(value)
+                    $(".savewindow").css("display", "none")
+                    $("#tx").val("")
+                    $("#sl").val("Raw Text File (.txt)")
+                    $("#se").val("Documents Folder")
+                    $("#te").val("")
+                    $(".txt").css("display", "none");
+                
+            });
+            $("#three").dblclick(function(){
+               $(".file").css("display", "block") 
+            })
+            $(".window div").click(function() {
+                $("div").css("z-index", "0")
+         $(this).css("z-index", "1")   
+            })
+            for (var f = 0; f < document.getElementById("tb").rows.length; f++) {
+                    document.getElementById("tb").deleteRow(f);
+                }
+                var txtarr2 = []
+                var iarray = []
+                var get = document.cookie.split(";")
+                for (var i = 0; i < get.length; i++) {
+                    if (get[i].charAt(1) === "<") {
+                        iarray.push(i)
+                    }
+                    if (get[i].charAt(1) === "i" && get[i].charAt(2) === "m") {
+                        $("body").css("background-image", "url('"+get[i].substring(4, get[i.length - 1])+"')")
+                    }
+                    if (get[i].charAt(1) === "t" && get[i].charAt(2) === "h") {
+                        if (get[i].substring(4, get[i.length - 1]) === "dark") {
+                    darkTheme()
+                }
+                    if (get[i].substring(4, get[i.length - 1]) === "light") {
+                    lightTheme()
+                }
+                    }
+                }
+                for (var v = 0; v < iarray.length; v++) {
+                        var array_split = get[iarray[v]].split("^")
+                        txtarr2.push(array_split[1])
+                        var ol = document.getElementById("tb").insertRow();
+                        var row1 = ol.insertCell(0)
+                        var row2 = ol.insertCell(1)
+                        var row3 = ol.insertCell(2)
+                        row1.innerHTML = array_split[4]
+                        row2.innerHTML = array_split[5]
+                        row3.innerHTML = array_split[2]
+                    }
+            $(document).delegate(".files tr", "dblclick", function(){
+                $(".txt").css("display", "block")
+                $(".savewindow").css("display", "none")
+                var rowa = this.rowIndex
+                $("#tx").val(txtarr2[rowa].replace(/%/g, "\n"))
+                $(".files").css("display", "none")
+                
+            })
+            $("#bg").click(function(){
+                var background = $("#im").val();
+                document.cookie = "im="+background
+                var other = "url('"+background+"')"
+                $("body").css("background-image", other, "no-repeat", "fixed")
+                var theme = $("input[name=select]:checked").val();
+                document.cookie = "th="+theme
+                if (theme === "dark") {
+                    darkTheme()
+                }
+                if (theme === "light") {
+                    lightTheme()
+                }
+            })
+            $("#bv").click(function(){
+                if ($("#tf").val() === "Christmas-Effect") {
+            function myFunction() {
+            var ahy = document.createElement("DIV")
+            $(ahy).addClass("snow")
+            var random = Math.floor((Math.random() * 1500) + 1);
+            $(ahy).css("margin-left", random)
+            document.getElementById("fs").appendChild(ahy);
+            $(ahy).animate({top:"5000px"}, 20000, function(){
+                $(ahy).css("display", "none")
+            })
+            }
+            setInterval(myFunction, 1000)
+        }
+        });
+        function darkTheme() {
+            $(".application").css("background-color", "#4c4c4c")
+            $(".full").css("color", "white")
+            $(".application").hover(function(){
+                $(".application").mousedown(function(){
+                   $(this).css("background-color", "lightgray")
+                })
+                $(".application").mouseup(function(){
+                   $(this).css("background-color", "#4c4c4c")
+               })
+            })
+        }
+        function lightTheme() {
+            $(".application").css("background-color", "lightgray")
+            $(".full").css("color", "black")
+        }
+        });
+    </script>
+</html>
